@@ -13,6 +13,11 @@
 
 Create all accounts on your primary machine first. The dedicated Mac should never see your personal accounts.
 
+> ⚠️ **Withdrawn (October 2026):** Tasks A and B below are kept for the record but are **not recommended any
+> more**. A bot-only e-mail address was closed by the provider within a day; the Anthropic account and the
+> payment method registered on it then had no login path left, while the API key kept working. Register API
+> accounts on an address you will control permanently. See the notice in the repository README.
+
 ### Task A — Create a Dedicated Email
 
 1. Create a new Gmail or ProtonMail account (e.g., `yourname.openclaw@gmail.com`)

@@ -1,5 +1,20 @@
 # OpenClaw AI Hub
 
+> ## ⚠️ Archived — superseded (October 2026)
+>
+> This guide is **no longer maintained**. The setup it describes was retired in July 2026 and replaced by a
+> multi-node Claude Code fleet. The current, maintained material lives in
+> **[ai-fleet-blueprint](https://github.com/kirchbergcapitalservices/ai-fleet-blueprint)** — same author,
+> same production lessons, different architecture.
+>
+> **One recommendation in this guide is withdrawn:** `docs/SETUP.md` tells you to create a *dedicated
+> throw-away e-mail address* and register a *separate Anthropic API account with its own payment method*
+> on it. In practice the mail provider closed the bot-only address within a day; the API account and the
+> card attached to it then lived on with no login path left. **Do not do this.** Register API accounts on
+> an address you control permanently, and treat an API key as something you must always be able to revoke.
+>
+> Everything else here is left as-is for reference. The repository is archived (read-only).
+
 > Your personal AI assistant — self-hosted, secure, extensible.
 
 **OpenClaw AI Hub** is a battle-tested setup guide and toolkit for running [OpenClaw](https://openclaw.ai) as a dedicated AI assistant on your own hardware. Combine local open-source models (Mistral, Qwen, Phi-4) with cloud AI (Claude) — controlled via Telegram, accessible from anywhere.
@@ -26,7 +41,6 @@ graph LR
 - **Ollama (local):** Models like Mistral 7B and Qwen 2.5 run 100% on your hardware. Data never leaves your machine. But these models are significantly less capable than Claude for complex reasoning, orchestration, and multi-step tasks.
 - **Tailscale:** End-to-end encrypted mesh VPN. No traffic goes through Tailscale's servers.
 
-> **Want automatic routing of sensitive data to local models?** Check out [OpenClaw AI Hub Pro](#-openclaw-ai-hub-pro) with the **Privacy Router**.
 
 ## Features
 
@@ -99,22 +113,7 @@ This setup is a **hybrid model** — be clear-eyed about what goes where:
 | **Tailscale** | End-to-end encrypted. No data on Tailscale servers. | Full control |
 | **Telegram** | Messages routed through Telegram servers. | Telegram terms apply |
 
-**For full data sovereignty over sensitive content**, you need to route queries intelligently — keeping financial data, personal information, and confidential documents on local models while letting general knowledge queries go to the cloud. This is exactly what the Pro version's Privacy Router does automatically.
-
-## OpenClaw AI Hub Pro
-
-The Pro version adds:
-
-- **Privacy Router** — Automatic routing based on data sensitivity. Financial data, personal information, and NDA content stay local. General queries go to the cloud. Configurable rules with PII detection and anonymization.
-- **GDPR/DSGVO Compliance Kit** — Processing directory templates, data protection impact assessment, DPA templates — ready to fill in for your organization.
-- **Multi-Node Setup** — Run multiple Mac Minis with task coordination, capacity planning, and automatic failover.
-- **Prompt Injection Defense** — Battle-tested detection patterns, counter-escalation protocols, and automated monitoring. Based on real-world attacks.
-- **Advanced Model Routing** — Detailed guide on which model for which task, pitfalls (e.g., models without tool support), cost optimization strategies.
-- **Lessons Learned** — 7 critical mistakes from production use and how to avoid them.
-- **Apple Integration** — Calendar, Reminders, Notes via CLI tools.
-- **Monitoring Dashboard** — Request stats, cost tracking, privacy audit log.
-
-**Access via GitHub Sponsors** — [Become a sponsor](https://github.com/sponsors/kirchbergcapitalservices) starting at €19/month.
+**For full data sovereignty over sensitive content**, you need to route queries intelligently — keeping financial data, personal information, and confidential documents on local models while letting general knowledge queries go to the cloud.
 
 ## Contributing
 
